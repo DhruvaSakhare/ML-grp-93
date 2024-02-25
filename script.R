@@ -34,8 +34,12 @@ corrplot(correlation_matrix, method = "color")
 #Standardization
 data.numeric.std <- as.data.frame(scale(data.numeric))
 
-# Assuming 'df' contains your numeric data frame
-pca_res <- prcomp(df, scale. = TRUE)
+# PCA
+pca_res <- prcomp(data.numeric.std, scale. = TRUE)
+autoplot(pca_res)
+
+autoplot(pca_res, data = data.refined, colour = 'class')
+
 
 # Calculate the cumulative proportion of variance explained
 cumulative_variance <- cumsum(pca_res$sdev^2) / sum(pca_res$sdev^2)
