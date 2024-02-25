@@ -1,0 +1,2 @@
+The ranking is done by solving a matrix eigenvalue problem.
+

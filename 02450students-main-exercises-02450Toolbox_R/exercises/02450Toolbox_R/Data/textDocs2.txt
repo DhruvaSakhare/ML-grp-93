@@ -1,0 +1,1 @@
+P_ij is nonzero if there is a link from webpage i to j.
