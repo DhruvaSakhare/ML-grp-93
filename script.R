@@ -41,8 +41,7 @@ pca_res <- prcomp(data.numeric.std, scale. = TRUE)
 autoplot(pca_res)
 
 autoplot(pca_res, data = data.refined, colour = 'class')
-autoplot(pca_res, data = data.refined, colour = 'class', loadings = TRUE)
-
+autoplot(pca_res, data = data.refined, colour = 'class', loadings = TRUE, loadings.colour = 'blue',loadings.label = TRUE, loadings.label.size = 3)
 # Calculate the cumulative proportion of variance explained
 cumulative_variance <- cumsum(pca_res$sdev^2) / sum(pca_res$sdev^2)
 
