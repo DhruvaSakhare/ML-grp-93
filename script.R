@@ -39,7 +39,7 @@ data.numeric.std <- as.data.frame(scale(data.numeric))
 # PCA
 pca_res <- prcomp(data.numeric.std, scale. = TRUE)
 autoplot(pca_res)
-
+loadings <- pca_res$rotation
 autoplot(pca_res, data = data.refined, colour = 'class')
 autoplot(pca_res, data = data.refined, colour = 'class', loadings = TRUE, loadings.colour = 'blue',loadings.label = TRUE, loadings.label.size = 3)
 # Calculate the cumulative proportion of variance explained
